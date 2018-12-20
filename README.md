@@ -1,9 +1,9 @@
 
-#协同过滤推荐
-协同过滤（Collaborative Filtering）算法基于领域，主要利用行为的相似度计算兴趣的相似度
+# 协同过滤推荐
+协同过滤（Collaborative Filtering）算法基于Kth领域，主要利用行为的相似度计算兴趣的相似度
 ## 基于用户的协同过滤推荐（User based)
 
-###用户相似度计算
+### 用户相似度计算
 
 计算规则：
 
@@ -27,12 +27,14 @@ N(i) - 喜欢商品i的用户集合，  log函数惩罚了用户u和用户v共�
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/Adjusted_cosine_similarity.jpg)
 
+Ii和Ij分别指经过用户i，j评分的项目集合，Iij指用户i，j共同评分的集合
+
 4）Pearson Correlation Coefficient，皮尔逊相关系数，与修正余弦相似度类似， 不同的时，其中心化的方式不同
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/Pearson_correlation_cofficient.jpg)
 
 
-###用户u对物品i的兴趣:
+### 用户u对物品i的兴趣:
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/ub_3.png)
 
@@ -65,11 +67,12 @@ Rui - 用户u对物品i的打分
 R(u) - 针对用户u所推荐的物品集合
 
 T(u) - 测试集中用户u所产生行为的物品集合
-###精准率(Precision):
+
+### 精准率(Precision):
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/precision.png)
 
-###覆盖率(Coverage):
+### 覆盖率(Coverage):
 定义：推荐系统所推荐出来的物品占总物品集合的比例
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/coverage.png)
@@ -78,7 +81,7 @@ U – 用户集合
 R(u) – 推荐系统给用户推荐的长度为N的物品列表
 I – 训练集所有物品集合
 
-###平均热门程度（Average Popularity）：
+### 平均热门程度（Average Popularity）：
 推荐结果的平均热门程度
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/popularity.png)
@@ -103,7 +106,7 @@ Item_pop(i)： 为该物品作出行为的用户数
   Random|0.0084%|0.0013%|99.3285%|1.0926
   UserCF-IIF|2.8959%|0.4366%|29.9789%|3.7459
 
-#测试
+# 测试
     运行命令：
         set FLASK_APP=Ser.py
         flask run
