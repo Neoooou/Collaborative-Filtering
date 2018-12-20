@@ -58,9 +58,9 @@ S(i, k) - 与物品i最邻近的k个物品
 Wij - 物品i，j相似度
 
 Rui - 用户u对物品i的打分
-##评估
+## 评估
 
-###召回率（Recall）:
+### 召回率（Recall）:
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/recall.png)
 
