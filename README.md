@@ -4,7 +4,10 @@
 ## 基于用户的协同过滤推荐（User based)
 
 ###用户相似度计算
-1）给定用户u，v，其之间相似度计算，采用余弦相似度， 
+
+计算规则：
+
+1）给定用户u，v，其之间相似度计算，采用余弦相似度， 做归一化处理
 N（u）- 用户u有过正反馈的物品集合， N（v）- 用户v有过正反馈的物品集合, Wu - 用户
 u，v之间的相似度，该规则称UserCF算法:
 
@@ -20,8 +23,14 @@ u，v之间的相似度，该规则称UserCF算法:
 N(i) - 喜欢商品i的用户集合，  log函数惩罚了用户u和用户v共同兴趣列表中热门物品对他们相似度的影响
 
 3）Adjusted Cosine Similarity， 修正余弦相似度，
-由于余弦相似度没有考虑不同用户的评分尺度的问题，修正的余弦相似度通过减去用户对物品的平均评分来做归一化处理
+由于余弦相似度没有考虑不同用户的评分尺度的问题，修正的余弦相似度通过减去用户对物品的平均评分来做中心化处理
+
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/Adjusted_cosine_similarity.jpg)
+
+4）Pearson Correlation Coefficient，皮尔逊相关系数，与修正余弦相似度类似， 不同的时，其中心化的方式不同
+
+![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/Pearson_correlation_cofficient.jpg)
+
 
 ###用户u对物品i的兴趣:
 
