@@ -4,14 +4,14 @@
 ## 基于用户的协同过滤推荐（User based)
 
 ###用户相似度计算
-规则1）给定用户u，v，其之间相似度计算，采用余弦相似度， 
+1）给定用户u，v，其之间相似度计算，采用余弦相似度， 
 N（u）- 用户u有过正反馈的物品集合， N（v）- 用户v有过正反馈的物品集合, Wu - 用户
 u，v之间的相似度，该规则称UserCF算法:
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/ub_1.png)
 
 
-规则2）给定用户u，v, 如果其都对冷门物品采取过正反馈，则更能说明他们兴趣的相似度，
+2）给定用户u，v, 如果其都对冷门物品采取过正反馈，则更能说明他们兴趣的相似度，
 也可以理解为二者喜欢的共同商品越热门，其带来的相似度增加值越低，引用来至John S.Breese，
 该规则称UserCF-IIF算法:
 
@@ -19,7 +19,9 @@ u，v之间的相似度，该规则称UserCF算法:
 
 N(i) - 喜欢商品i的用户集合，  log函数惩罚了用户u和用户v共同兴趣列表中热门物品对他们相似度的影响
 
-
+3）Adjusted Cosine Similarity， 修正余弦相似度，
+由于余弦相似度没有考虑不同用户的评分尺度的问题，修正的余弦相似度通过减去用户对物品的平均评分来做归一化处理
+![]()
 ###用户u对物品i的兴趣:
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/ub_3.png)
