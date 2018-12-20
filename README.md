@@ -21,7 +21,8 @@ N(i) - 喜欢商品i的用户集合，  log函数惩罚了用户u和用户v共�
 
 3）Adjusted Cosine Similarity， 修正余弦相似度，
 由于余弦相似度没有考虑不同用户的评分尺度的问题，修正的余弦相似度通过减去用户对物品的平均评分来做归一化处理
-![]()
+![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/Adjusted_cosine_similarity.jpg)
+
 ###用户u对物品i的兴趣:
 
 ![](https://raw.githubusercontent.com/Neoooou/Recommendation-System/master/img/ub_3.png)
